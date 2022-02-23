@@ -1,0 +1,12 @@
+<form [formGroup]="login">
+  <label for="isbn">ISBN: </label>
+  <input id="isbn" type="text" formControlName="isbn" required />
+
+  <label for="name">Title: </label>
+  <input id="name" type="name" formControlName="name" required />
+
+  <label for="pages">Pages: </label>
+  <input id="pages" type="number" formControlName="pages" required />
+  <label>Añadir libro: </label>
+  <button type="submit" [disabled]="!login.valid">Submit</button>
+</form>
