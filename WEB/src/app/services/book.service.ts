@@ -7,7 +7,14 @@ import { Book } from '../models/book.model';
 @Injectable()
 export class BookService {
   constructor(private http: HttpClient) {}
-  getBookData() : Observable<Book[]> {
+  getBookData(): Observable<Book[]> {
     return this.http.get<Book[]>(environment.API_URL + 'books');
+  }
+
+  postBookData(body: Book): Observable<Book[]> {
+    return this.http.post<Book[]>(
+      environment.API_URL + 'books',
+      JSON.stringify(body)
+    );
   }
 }

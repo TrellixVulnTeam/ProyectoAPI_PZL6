@@ -8,17 +8,13 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./add-book.component.css'],
 })
 export class AddBookComponent implements OnInit {
-  isOk: boolean | null;
-
-  login = this.fb.group({
+  bookForm = this.fb.group({
     isbn: ['', Validators.required],
     name: ['', Validators.required],
     pages: ['', Validators.required],
   });
 
-  constructor(private fb: FormBuilder) {
-    this.isOk = null;
-  }
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {}
 }

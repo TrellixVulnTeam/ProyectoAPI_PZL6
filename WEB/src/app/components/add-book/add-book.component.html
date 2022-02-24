@@ -1,4 +1,4 @@
-<form [formGroup]="login">
+<form [formGroup]="bookForm">
   <label for="isbn">ISBN: </label>
   <input id="isbn" type="text" formControlName="isbn" required />
 
@@ -8,5 +8,5 @@
   <label for="pages">Pages: </label>
   <input id="pages" type="number" formControlName="pages" required />
   <label>Añadir libro: </label>
-  <button type="submit" [disabled]="!login.valid">Submit</button>
+  <button type="submit" [disabled]="!bookForm.valid">Submit</button>
 </form>
